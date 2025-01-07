@@ -29,3 +29,10 @@ docker exec -it laravel_app php artisan make:model Task
 Guarda el archivo y reinicia Nginx con:
 docker-compose down
 docker-compose up -d --build
+
+
+docker exec -it laravel_app php artisan config:clear
+docker exec -it laravel_app php artisan cache:clear
+docker exec -it laravel_app php artisan view:clear
+docker exec -it laravel_app php artisan config:cache
+
